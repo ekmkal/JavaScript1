@@ -1,3 +1,5 @@
+'use strict';
+
 console.log('Hello world!') //English
 console.log('Halo, dunia!') //Indonesian
 console.log('Ciao, mondo!') //Italian

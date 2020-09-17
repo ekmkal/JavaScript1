@@ -1,2 +1,4 @@
-let mySentence = "Programming is so interesting!"
+'use strict';
+
+const mySentence = "Programming is so interesting!"
 console.log(mySentence.length)
