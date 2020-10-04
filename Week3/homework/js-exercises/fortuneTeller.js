@@ -10,10 +10,8 @@ const tellFortune = (kidsName, nameOfPartner, geographicLocation, jobTitle) => {
     const randomPartner = nameOfPartner[Math.floor(Math.random() * nameOfPartner.length)];
     const randomLocation = geographicLocation[Math.floor(Math.random() * geographicLocation.length)];
     const randomJob = jobTitle[Math.floor(Math.random() * jobTitle.length)];
-    // console.log('You will be a ' + randomJob + ' in ' + randomLocation + 
-    // ', married to ' + randomPartner + ' with ' + randomKidNum + ' kids.');
-    console.log(`You will be a ${randomJob} in ${randomLocation}, ` + 
-    `married to ${randomPartner} with ${randomKidNum} kids.`);
+    return `You will be a ${randomJob} in ${randomLocation}, ` + 
+    `married to ${randomPartner} with ${randomKidNum} kids.`;
 }
 
 tellFortune(numChildren, partnerNames, locations, jobs);

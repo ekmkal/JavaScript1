@@ -11,7 +11,7 @@ const addToShoppingCart = groceryItem => {
     for (const item of shoppingCart){
         listOfGroceryItems.push(item)
     }
-    return console.log('You bought %s!', listOfGroceryItems.join(', '))
+    return 'You bought %s!', listOfGroceryItems.join(', ');
 }
 
 addToShoppingCart('cola');

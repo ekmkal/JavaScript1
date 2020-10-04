@@ -1,17 +1,9 @@
 'use strict'
 
 const validateCreditNumber = cardNumber => {
-    // I create an array to collect the different numbers from the cardNumber
-    const numbersOfCardNumber = [];
-    // If the number is already in the array, 'for' loop iterates again;
-    // if not, the number is pushed into the array.
-    for (let i = 0; i < cardNumber.length; i++) {
-        if (numbersOfCardNumber.includes(cardNumber[i])) {
-            continue;
-        } else{
-            numbersOfCardNumber.push(cardNumber[i]);
-        }
-    };
+    // An array to collect the different numbers from the cardNumber
+    const numbersOfCardNumber = cardNumber.split('');
+    const uniqueNumbers = new Set(numbersOfCardNumber);
 
     // Calculation of the sum of all numbers
     let sum = 0;
@@ -27,7 +19,7 @@ const validateCreditNumber = cardNumber => {
         case !(Number.isInteger(Number(cardNumber))) :
             return console.log(`Invalid! The input ${cardNumber} should contain only numbers!`);
             break;
-        case !(numbersOfCardNumber.length >= 2) :
+        case !(uniqueNumbers.length >= 2) :
             return console.log(`Invalid! The input ${cardNumber} should contain at least 2 different types of numbers!`);
             break;
         case !(Number(cardNumber[cardNumber.length - 1]) % 2 === 0) :

@@ -11,10 +11,11 @@ const cartForParty = {
 const calculateTotalPrice = numObject => {
     let totalPrice = 0;
     for (let key of Object.keys(cartForParty)) {
-        totalPrice += cartForParty[key];
-    }
-    //return console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(totalPrice));
+        if(typeof cartForParty[key] === 'number'){
+            totalPrice += cartForParty[key];
+        };
+    };
     return console.log('Total: ' + Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(totalPrice));
-}
+};
 
 calculateTotalPrice(cartForParty);
